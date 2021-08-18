@@ -4,7 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
-import android.widget.Toast
+import android.widget.TextView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -13,8 +13,8 @@ class MainActivity : AppCompatActivity() {
 
         val rollButton: Button = findViewById(R.id.button)
         rollButton.setOnClickListener {
-            val toast = Toast.makeText(this, "Dice Rolled!", Toast.LENGTH_SHORT)
-            toast.show()
+            val resultTextView: TextView = findViewById(R.id.textView)
+            resultTextView.text = "6"
         }
     }
 
